@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ski Deals</title>
+</head>
+<body>
+<h1>Ski Deal Email Signup</h1>
+<form method="POST" action="{% url 'home' %}">
+    {% csrf_token %}
+    <input type="text" name="email_address"/>
+    <input type="submit" value="Submit Email"/>
+</form>
+{% if data %}
+<p>{{ data }}</p>
+{% endif %}
+</body>
+</html>
